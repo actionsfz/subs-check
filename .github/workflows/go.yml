@@ -2,7 +2,7 @@ name: Subs Check
 
 on:
   schedule:
-    - cron: '0 0,4,8,12,16 * * *'  # 每天 UTC 02:00 执行（可根据需要修改）
+    - cron: '0 0,4,8,12,16 * * *'
   workflow_dispatch:      # 允许手动触发
 
 jobs:
@@ -32,6 +32,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: update output [auto]"
-            git pull --rebase origin master  # 如果你的主分支是 main 就改成 main
-            git push origin HEAD:master      # 如果你的主分支是 main 就改成 main
+            git pull --rebase origin master 
+            git push origin HEAD:master 
           fi
