@@ -18,11 +18,11 @@ jobs:
         with:
           go-version: '1.21'
 
-      - name: Run subs-check
+      - name: Run subs-check once
         run: |
           mkdir -p output
-          go run . -f ./config/config.yaml
-
+          go run ./cmd/once/once.go -f ./config/config.yaml
+          
       - name: Commit and Push output
         run: |
           git config --local user.email "actions@github.com"
