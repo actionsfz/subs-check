@@ -22,7 +22,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := application.CheckProxies(); err != nil {
+	if err := application.TriggerCheck(); err != nil {
 		slog.Error(fmt.Sprintf("检测失败: %v", err))
 		os.Exit(1)
 	}
