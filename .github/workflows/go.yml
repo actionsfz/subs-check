@@ -1,14 +1,17 @@
 name: Subs Check
 
+concurrency:
+  group: subs-check
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: '0 0,4,8,12,16 * * *'
-  workflow_dispatch:      # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   run-subs-check:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -22,7 +25,7 @@ jobs:
         run: |
           mkdir -p output
           go run ./cmd/once/once.go -f ./config/config.yaml
-          
+
       - name: Commit and Push output
         run: |
           git config --local user.email "actions@github.com"
@@ -32,6 +35,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: update output [auto]"
-            git pull --rebase origin master 
-            git push origin HEAD:master 
+            git pull --rebase origin master
+            git push origin HEAD:master
           fi
