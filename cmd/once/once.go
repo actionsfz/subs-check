@@ -22,10 +22,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := application.TriggerCheck(); err != nil {
-		slog.Error(fmt.Sprintf("检测失败: %v", err))
-		os.Exit(1)
-	}
+	application.TriggerCheck()
 
 	slog.Info("订阅检测已完成，一次性任务退出。")
 }
