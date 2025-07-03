@@ -1,9 +1,5 @@
 name: Subs Check
 
-concurrency:
-  group: subs-check
-  cancel-in-progress: false
-
 on:
   schedule:
     - cron: '0 0,4,8,12,16 * * *'
@@ -24,6 +20,7 @@ jobs:
       - name: Run subs-check once
         run: |
           mkdir -p output
+          cp -r /tmp/go-build*/b001/exe/output/* ./output/
           go run ./cmd/once/once.go -f ./config/config.yaml
 
       - name: Commit and Push output
