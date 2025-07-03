@@ -243,3 +243,8 @@ func (app *App) checkProxies() error {
 func TempLog() string {
 	return filepath.Join(os.TempDir(), "subs-check.log")
 }
+
+// OnceCheck 仅执行一次检测
+func (app *App) OnceCheck() {
+	app.triggerCheck()
+}
