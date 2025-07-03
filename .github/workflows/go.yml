@@ -21,10 +21,18 @@ jobs:
         run: |
           go run ./cmd/once/once.go -f ./config/config.yaml
 
+      - name: Debug /tmp content
+        run: |
+          ls -l /tmp
+          ls -l /tmp/go-build*
+          ls -l /tmp/go-build*/b001/exe/output
+
       - name: Commit and Push output
         run: |
+          tmpdir=$(ls -d /tmp/go-build*/b001/exe/output)
+          echo "临时目录是 $tmpdir"
           mkdir -p output
-          cp -r /tmp/go-build*/b001/exe/output/* ./output/
+          cp -r "$tmpdir"/* ./output/
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add output
