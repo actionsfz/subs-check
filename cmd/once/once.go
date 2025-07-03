@@ -22,7 +22,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	application.TriggerCheck()
+	application.OnceCheck()
 
 	slog.Info("订阅检测已完成，一次性任务退出。")
 }
