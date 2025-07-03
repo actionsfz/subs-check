@@ -1,8 +1,8 @@
 # 是否显示进度
-print-progress: false
+print-progress: true
 
 # 并发线程数
-concurrent: 20
+concurrent: 10
 # 检查间隔(分钟)
 check-interval: 0
 # cron表达式，如果配置了此项，将忽略check-interval
@@ -154,64 +154,64 @@ success-rate: 0
 # 如果用户想使用clash类型，那可以在支持的订阅链接结尾加上 &flag=clash.meta
 # github 链接可自己添加ghproxy使用；订阅链接支持 HTTP_PROXY HTTPS_PROXY 环境变量加速拉取
 sub-urls:
-#   - "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml"
-#   - "https://raw.githubusercontent.com/actionsfz/v2ray/refs/heads/master/all.yaml"
-#   - "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub"
-#   # - https://example.com/sub2.txt
-#   # - https://example.com/sub?token=43fa8f0dc9bb00dcfec2afb21b14378a
-#   # - https://example.com/sub?token=43fa8f0dc9bb00dcfec2afb21b14378a?flag=clash.meta
-#   # - https://raw.githubusercontent.com/example/repo/main/config/{Ymd}.yaml
-#   # - https://raw.githubusercontent.com/example/repo/main/daily/daily-{Y}-{m}-{d}.yaml
-#   - "https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml"
-# #   - "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/clash/naidounode.txt"
-#   - "https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml"
-#   - "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
-#   - "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
-# #   - "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
-#   - "https://raw.githubusercontent.com/mgit0001/test_clash/refs/heads/main/heima.txt"
-#   - "https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2"
-#   - "https://raw.githubusercontent.com/shahidbhutta/Clash/refs/heads/main/Router"
-# #   - "https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml"
-# #   - "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
-#   - "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml"
-# #   - "https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml"
-#   - "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
-#   # - "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt"
-#   - "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
-# #   - "https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml"
-#   - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
-# #   - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
-#   - https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml
-#   - https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
-#   - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray.txt
-#   - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray/v2rayshare.txt
-# #   - https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml
-# #   - https://raw.githubusercontent.com/ts-sf/fly/main/clash
-# #   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
-#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/clashmeta.txt
-#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/ndnode.txt
-# #   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodev2ray.txt
-#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt
-#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/v2rayshare.txt
-#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt
-#   - https://raw.githubusercontent.com/ggborr/FREEE-VPN/refs/heads/main/6V2ray
-# #   - https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt  #2万多个
-# #   - https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
-#   - https://raw.githubusercontent.com/acymz/AutoVPN/main/data/V2.txt
-# #   - https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml
-# #   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
-# #   - https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/utils/pool/output.yaml
-#   - https://raw.githubusercontent.com/yorkLiu/FreeV2RayNode/main/v2ray.txt
-# #   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
-# #   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
-# #   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
-# #   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt  #2万多个 成功59
-# #   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
-# #   - https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
-# #   - https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml
-# #   - https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
-# #   - https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/TrinityBase
-#   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
-# #   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
-# #   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
+  - "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml"
+  - "https://raw.githubusercontent.com/actionsfz/v2ray/refs/heads/master/all.yaml"
+  - "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub"
+  # - https://example.com/sub2.txt
+  # - https://example.com/sub?token=43fa8f0dc9bb00dcfec2afb21b14378a
+  # - https://example.com/sub?token=43fa8f0dc9bb00dcfec2afb21b14378a?flag=clash.meta
+  # - https://raw.githubusercontent.com/example/repo/main/config/{Ymd}.yaml
+  # - https://raw.githubusercontent.com/example/repo/main/daily/daily-{Y}-{m}-{d}.yaml
+  - "https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml"
+#   - "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/clash/naidounode.txt"
+  - "https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml"
+  - "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
+  - "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+#   - "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
+  - "https://raw.githubusercontent.com/mgit0001/test_clash/refs/heads/main/heima.txt"
+  - "https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/v2"
+  - "https://raw.githubusercontent.com/shahidbhutta/Clash/refs/heads/main/Router"
+#   - "https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml"
+#   - "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml"
+  - "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml"
+#   - "https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml"
+  - "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+  # - "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt"
+  - "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
+#   - "https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml"
+  - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
+#   - https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+  - https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml
+  - https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
+  - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray.txt
+  - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray/v2rayshare.txt
+#   - https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/clash-meta/all.yaml
+#   - https://raw.githubusercontent.com/ts-sf/fly/main/clash
+#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
+  - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/clashmeta.txt
+  - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/ndnode.txt
+#   - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodev2ray.txt
+  - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt
+  - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/v2rayshare.txt
+  - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt
+  - https://raw.githubusercontent.com/ggborr/FREEE-VPN/refs/heads/main/6V2ray
+#   - https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links1.txt  #2万多个
+#   - https://raw.githubusercontent.com/SamanGho/v2ray_collector/main/v2tel_links2.txt
+  - https://raw.githubusercontent.com/acymz/AutoVPN/main/data/V2.txt
+#   - https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml
+#   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/V2.txt
+#   - https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/utils/pool/output.yaml
+  - https://raw.githubusercontent.com/yorkLiu/FreeV2RayNode/main/v2ray.txt
+#   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ss.txt
+#   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/ssr.txt
+#   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/trojan.txt
+#   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vless.txt  #2万多个 成功59
+#   - https://raw.githubusercontent.com/gfpcom/free-proxy-list/main/list/vmess.txt
+#   - https://raw.githubusercontent.com/NiceVPN123/NiceVPN/main/Clash.yaml
+#   - https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/trinity_clash.yaml
+#   - https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/VM_TrinityBase
+#   - https://raw.githubusercontent.com/lagzian/SS-Collector/main/SS/TrinityBase
+  - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/ss_iran.txt
+#   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/trojan_iran.txt
+#   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vless_iran.txt
   - https://raw.githubusercontent.com/darknessm427/IranConfigCollector/main/bulk/vmess_iran.txt
