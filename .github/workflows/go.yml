@@ -20,7 +20,7 @@ jobs:
       - name: Run subs-check once
         run: |
           go build -o ./bin/subs-check ./cmd/once/once.go  
-          ./bin/subs-check
+          ./bin/subs-check -f ./config/config.yaml
 
       - name: Debug /tmp content
         run: |
