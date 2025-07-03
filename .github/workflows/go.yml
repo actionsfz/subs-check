@@ -19,20 +19,22 @@ jobs:
 
       - name: Run subs-check once
         run: |
-          go run ./cmd/once/once.go -f ./config/config.yaml
+          go build -o ./bin/subs-check ./cmd/once/once.go  
+          ./bin/subs-check
 
       - name: Debug /tmp content
         run: |
-          ls -l /tmp
-          ls -l /tmp/go-build*
-          ls -l /tmp/go-build*/b001/exe/output
+            ls ./
+      #     ls -l /tmp
+      #     ls -l /tmp/go-build*
+      #     ls -l /tmp/go-build*/b001/exe/output
 
       - name: Commit and Push output
         run: |
-          tmpdir=$(ls -d /tmp/go-build*/b001/exe/output)
-          echo "临时目录是 $tmpdir"
-          mkdir -p output
-          cp -r "$tmpdir"/* ./output/
+          # tmpdir=$(ls -d /tmp/go-build*/b001/exe/output)
+          # echo "临时目录是 $tmpdir"
+          # mkdir -p output
+          # cp -r "$tmpdir"/* ./output/
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add output
