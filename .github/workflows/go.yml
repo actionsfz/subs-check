@@ -19,12 +19,12 @@ jobs:
 
       - name: Run subs-check once
         run: |
-          mkdir -p output
-          cp -r /tmp/go-build*/b001/exe/output/* ./output/
           go run ./cmd/once/once.go -f ./config/config.yaml
 
       - name: Commit and Push output
         run: |
+          mkdir -p output
+          cp -r /tmp/go-build*/b001/exe/output/* ./output/
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add output
